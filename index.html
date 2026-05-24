@@ -54,6 +54,7 @@ alert(ctx.className);
 
 function onTouch(event) {
     alert(event.type);
+    alert(event.clientX);
 }
 canvas.addEventListener('pointermove', onTouch);
 canvas.addEventListener('click', onTouch);
