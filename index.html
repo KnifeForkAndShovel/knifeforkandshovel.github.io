@@ -7,18 +7,7 @@
 <body>
 <canvas width="1920" height="448">           
 </canvas>
-<script id='listener'>
-var element = document.querySelector('canvas');
 
-alert('script started');
-alert(element.id);
-
-function onTouch(event) {
-    alert(event.type);
-}
-
-element.addEventListener('touchevent', onTouch);
-</script>
 
 <script id="rendered-js">
 // Initialising the canvas
@@ -63,8 +52,21 @@ function draw() {
 // Loop the animation
 setInterval(draw, 33);
 //# sourceURL=pen.js
-  </script>
+</script>
 
+
+<script id='listener'>
+var element = document.querySelector('canvas');
+
+alert('script started');
+alert(element.id);
+
+function onTouch(event) {
+    alert(event.type);
+}
+
+element.addEventListener('touchevent', onTouch);
+</script>
 </body>
 
 </html>
