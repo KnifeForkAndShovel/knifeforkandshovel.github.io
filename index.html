@@ -55,8 +55,8 @@ alert(ctx.className);
 function onTouch(event) {
     alert(event.type);
 }
-ctx.addEventListener('touchevent', onTouch);
-//ctx.addEventListener('mouseevent', onTouch);
+canvas.addEventListener('touchevent', onTouch);
+canvas.addEventListener('mouseevent', onTouch);
 
 // Loop the animation
 setInterval(draw, 33);
