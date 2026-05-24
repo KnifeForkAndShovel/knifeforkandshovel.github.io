@@ -56,7 +56,7 @@ function onTouch(event) {
     alert(event.type);
 }
 canvas.addEventListener('touchevent', onTouch);
-canvas.addEventListener('mouseevent', onTouch);
+canvas.addEventListener('click', onTouch);
 
 // Loop the animation
 setInterval(draw, 33);
