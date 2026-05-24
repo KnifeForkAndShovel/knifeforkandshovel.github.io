@@ -8,9 +8,11 @@
 <canvas width="1920" height="448">           
 </canvas>
 <script id='listener'>
-var element = document.getElementById('canvas')
+var element = document.querySelector('canvas'),
 
-alert('script started')
+alert('script started');
+alert(canvas.id);
+
 function onTouch(event) {
     alert(event.type);
 }
