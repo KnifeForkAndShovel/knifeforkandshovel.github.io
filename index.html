@@ -52,6 +52,10 @@ function draw() {
 alert('script started2');
 alert(canvas.className);
 
+function onTouch(event) {
+    alert(event.type);
+}
+canvas.addEventListener('touchevent', onTouch);
 
 // Loop the animation
 setInterval(draw, 33);
