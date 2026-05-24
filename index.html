@@ -49,14 +49,14 @@ function draw() {
   }
 }
 
-alert('script started3');
+alert('script started4');
 alert(ctx.className);
 
 function onTouch(event) {
     alert(event.type);
 }
-canvas.addEventListener('touchevent', onTouch);
-canvas.addEventListener('mouseevent', onTouch);
+ctx.addEventListener('touchevent', onTouch);
+ctx.addEventListener('mouseevent', onTouch);
 
 // Loop the animation
 setInterval(draw, 33);
