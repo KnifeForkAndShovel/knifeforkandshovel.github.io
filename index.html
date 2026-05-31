@@ -57,7 +57,7 @@ var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNO
 letters = letters.split('');
 
 // Setting up the columns
-var fontSize = 40,
+var fontSize = 10,
 columns = canvas.width / fontSize;
 
 // Setting up the drops
@@ -69,7 +69,7 @@ for (var i = 0; i < columns; i++) {
 // Setting up the draw function
 function draw() {
   ctx.fillStyle = 'rgba(0, 0, 0, .1)';
-  ctx.font = "bold 48px monospace";
+  ctx.font = "bold 10px monospace";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];
@@ -88,7 +88,7 @@ function draw() {
 function onTouch(event) {
     
     var overlay = document.getElementById('overlay')
-    alert(overlay.style.display)
+    //alert(overlay.style.display)
     
     if (overlay.style.display=="block") {
          overlay.style.display="none";
@@ -97,9 +97,11 @@ function onTouch(event) {
          overlay.style.display="block";
     }
     
-    alert(event.type);
-    alert(event.clientX);
+    //alert(event.type);
+    //alert(event.clientX);
 }
+
+//commented out so can debug on laptop with mouse. remove before go live.
 //canvas.addEventListener('pointermove', onTouch);
 canvas.addEventListener('click', onTouch);
 
