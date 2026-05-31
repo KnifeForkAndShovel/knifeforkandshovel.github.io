@@ -34,7 +34,7 @@
 <canvas width="1920" height="448">           
 </canvas>
 
-<div id="overlay" onclick="off()">
+<div id="overlay">
   <div id="text">Overlay Text</div>
 </div>
 
@@ -82,10 +82,16 @@ function draw() {
   }
 }
 
-alert('script started1');
-alert(ctx.className);
+//alert('script started1');
+//alert(ctx.className);
 
 function onTouch(event) {
+    if overlay.style.display=="block" {
+         overlay.style.display="none";
+    }
+    else {
+         overlay.style.display="block";
+    }
     alert(event.type);
     alert(event.clientX);
 }
