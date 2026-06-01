@@ -2,7 +2,31 @@
 
 <head>
 
+<style>
+div {
+  position: fixed;
+  display: none;
+  width: 20%;
+  height: 20%;
+  top: 0%;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1,0,0,1.0);
+  z-index: 2;
+  cursor: pointer;
+}
 
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: green;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+</style>
 
 </head>
 
@@ -10,7 +34,7 @@
 <canvas width="1920" height="448">           
 </canvas>
 
-<div id="overlay" style ="display: none; color:green; border-color: green; border-style: solid, z-index: 2, top=0, left=0, width: 20%, height: 20%">
+<div id="overlay" style ="display: none; color:green; border-color: green; border-style: solid ">
   <div id="text">Overlay Text</div>
 </div>
 
