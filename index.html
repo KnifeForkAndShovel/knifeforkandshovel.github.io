@@ -5,7 +5,7 @@
 <style>
 #overlay {
   position: fixed;
-  display: block;
+  display: none;
   width: 20%;
   height: 20%;
   top: 0%;
@@ -38,14 +38,21 @@
   <div id="text">Overlay Text</div>
 </div>
 
+<div id="overlay2" style ="display: block; color:red; border-color: red; border-style: solid ">
+  <div id="text">Access Denied</div>
+</div>
+
+
 <script id="rendered-js">
 // Initialising the canvas
 var canvas = document.querySelector('canvas'),
 ctx = canvas.getContext('2d');
 
 var overlay = document.getElementById('overlay')
-overString="ACCESS GRANTED"
+var overlay2 = document.getElementById('overlay2')
 
+
+overString="ACCESS GRANTED"
 overlay.innerHTML=overString
 
 // Setting the width and height of the canvas
@@ -98,15 +105,32 @@ function onTouch(event) {
          overlay.style.display="block";
     }
     
-    alert(event.type);
+    //alert(event.type);
+    //alert(event.clientX);
+}
+
+function onSwipe(event) {
+    
+    var overlay = document.getElementById('overlay2')
+    //alert(overlay.style.display)
+    
+    if (overlay.style.display=="block") {
+         overlay.style.display="none";
+    }
+    else {
+         overlay.style.display="block";
+    }
+    
+    //alert(event.type);
     //alert(event.clientX);
 }
 
 //commented out so can debug on laptop with mouse. remove before go live.
-canvas.addEventListener('touchevent', onTouch);
-canvas.addEventListener('pointermove', onTouch);
+//canvas.addEventListener('touchevent', onTouch);
+canvas.addEventListener('pointermove', onSwipe);
 canvas.addEventListener('click', onTouch);
 overlay.addEventListener('click', onTouch);
+overlay2.addEventListener('pointermove', onSwipe);
 
 // Loop the animation
 setInterval(draw, 33);
