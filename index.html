@@ -35,11 +35,11 @@ div {
 </canvas>
 
 <div id="overlay" style ="display: none; color:green; border-color: green; border-style: solid ">
-  <div id="text">Overlay Text</div>
+  <p style="font-size:50px">ACCESS GRANTED</p>
 </div>
 
 <div id="overlay2" style ="display: none; color:red; border-color: red; border-style: solid">
-  <p style="font-size:50px">Access Denied!</p>
+  <p style="font-size:50px">ACCESS DENIED</p>
 </div>
 
 
@@ -52,8 +52,7 @@ var overlay = document.getElementById('overlay')
 var overlay2 = document.getElementById('overlay2')
 
 
-overString="ACCESS GRANTED"
-overlay.innerHTML=overString
+
 
 // Setting the width and height of the canvas
 //canvas.width = window.innerWidth;
