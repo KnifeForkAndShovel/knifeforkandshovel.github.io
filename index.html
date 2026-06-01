@@ -106,6 +106,7 @@ function onTouch(event) {
 canvas.addEventListener('touchevent', onTouch);
 canvas.addEventListener('pointermove', onTouch);
 canvas.addEventListener('click', onTouch);
+overlay.addEventListener('click', onTouch);
 
 // Loop the animation
 setInterval(draw, 33);
